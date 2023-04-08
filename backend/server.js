@@ -3,6 +3,10 @@ const express = require('express');
 const formData = require('express-form-data');
 const dotenv = require('dotenv').config();
 const { errorHandler } = require('./middleware/errorMiddleware');
+const colors = require('colors');
+const connectDB = require('./config/db');
+
+connectDB();
 
 const app = express();
 const port = process.env.PORT || 6000;
